@@ -1,0 +1,7 @@
+/.vagrant
+/photo_blog/settings/local.py
+/static
+*.pyc
+/media
+/Vagrantfile.local
+.idea
