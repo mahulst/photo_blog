@@ -2,8 +2,6 @@ from datetime import date
 from django import template
 from django.conf import settings
 
-from demo.models import PersonPage, BlogPage, EventPage, Advert, Page
-
 register = template.Library()
 
 
@@ -112,15 +110,6 @@ def event_listing_homepage(context, count=2):
     return {
         'events': events[:count].select_related('feed_image'),
         # required by the pageurl tag that we want to use within this template
-        'request': context['request'],
-    }
-
-
-# Advert snippets
-@register.inclusion_tag('demo/tags/adverts.html', takes_context=True)
-def adverts(context):
-    return {
-        'adverts': Advert.objects.select_related('page'),
         'request': context['request'],
     }
 
