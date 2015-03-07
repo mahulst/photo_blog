@@ -1,0 +1,17 @@
+.photos {
+  .photobox {
+    @include grid-column(3);
+
+    &.large {
+    @include grid-column(6);
+      .photo {
+        height: 412px;
+      }
+    }
+  }
+  .photo {
+    background-color: red;
+    height: 200px;
+    margin-bottom: 12px;
+  }
+}

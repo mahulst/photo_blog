@@ -4,14 +4,21 @@ $wagtail-color: rgb(0, 127, 127);
 $html-background-color: whitesmoke;
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import "_functions.scss";
+@import "_settings.scss";
 @import "bower_components/foundation/scss/foundation.scss";
+@import "header.scss";
+@import "photos.scss";
 html {
-    background-color: $html-background-color;
+
 }
 
 /* fonts */
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    background-color: $background-color;
+     background-color: $html-background-color;
 }
 
+.container {
+    max-width: rem-calc(1200);
+}
